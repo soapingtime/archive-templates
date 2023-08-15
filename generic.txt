@@ -2,4 +2,4 @@ export USER_AGENT="Mosaic/9.0 (Commodore AmigaOS 4.0) AmiWeb/4.1.33 (KHTML, like
 export SAVE_HOST="example.com"
 export WARC_NAME="example.com-$(date +%Y%m%d)"
 
-wget -e robots=off --mirror --page-requisites --waitretry 5 --timeout 60 --tries 5 --wait 1 --warc-cdx --warc-file="$WARC_NAME" -U "$USER_AGENT" "$SAVE_HOST"
+wget --adjust-extension --convert-links -e robots=off --mirror --page-requisites -a $WARC_NAME.log --waitretry 5 --timeout 60 --tries 5 --wait 1 --warc-cdx --warc-file="$WARC_NAME" -U "$USER_AGENT" "$SAVE_HOST"
