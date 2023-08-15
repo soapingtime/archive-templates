@@ -1,0 +1,2 @@
+wget --spider --keep-session-cookies --save-cookies=COOKIEFILE https://forum.xentax.com
+wget -w 1 -c -m -np -a forum.xentax.com_$(date +%Y%m%d).log -e robots=off -nv --adjust-extension --convert-links --page-requisites  --reject-regex='(\?p=|&p=|mode=reply|view=|search.php|mode=viewprofile|mode=login|thankslist)' --warc-file=forum.xentax.com_$(date +%Y%m%d) --warc-cdx --keep-session-cookies --user-agent="Mosaic/9.0 (Commodore AmigaOS 4.0) AmiWeb/4.1.33 (KHTML, like Gecko) Version/22.1 iBrowse/4.1.41" --load-cookies=COOKIEFILE https://forum.xentax.com
