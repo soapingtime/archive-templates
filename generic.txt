@@ -1,4 +1,4 @@
-export USER_AGENT="Mosaic/9.0 (Commodore AmigaOS 4.0) AmiWeb/4.1.33 (KHTML, like Gecko) Version/22.1 Mozilla/5.0"
+export USER_AGENT="Mosaic/9.0 (Commodore AmigaOS 4.0) AmiWeb/4.1.33 (KHTML, like Gecko) Version/22.1 Mozilla/5.0. Contact: https://boytw.ink/crawl_contact.txt"
 export SAVE_HOST="example.com"
 export WARC_NAME="example.com-$(date +%Y%m%d)"
 
