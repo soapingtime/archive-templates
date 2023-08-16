@@ -1,5 +1,5 @@
 export USER_AGENT="Mosaic/9.0 (Commodore AmigaOS 4.0) AmiWeb/4.1.33 (KHTML, like Gecko) Version/22.1 Mozilla/5.0. Contact: https://boytw.ink/crawl_contact.txt"
 export SAVE_HOST="example.com"
-export WARC_NAME="example.com-$(date +%Y%m%d)"
+export WARC_NAME="$SAVE_HOST-$(date +%Y%m%d)"
 
-wget --adjust-extension --convert-links -e robots=off --mirror --page-requisites -a $WARC_NAME.log --waitretry 5 --timeout 60 --tries 5 --wait 1 --warc-cdx --warc-file="$WARC_NAME" -U "$USER_AGENT" "$SAVE_HOST"
+wget --no-check-certificate --adjust-extension --convert-links -e robots=off --mirror --page-requisites -a $WARC_NAME.log --no-verbose --waitretry 5 --timeout 60 --tries 5 --wait 1 --warc-cdx --warc-file="$WARC_NAME" -U "$USER_AGENT" "$SAVE_HOST"
